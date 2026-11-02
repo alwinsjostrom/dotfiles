@@ -1,0 +1,130 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+palette="alvim"
+
+format = """
+[░▒▓](ini_bg)\
+$os\
+[](fg:ini_bg bg:dir_bg)\
+$directory\
+[](fg:dir_bg bg:git_bg)\
+$git_branch\
+$git_status\
+[](fg:git_bg bg:ver_bg)\
+$nodejs\
+$bun\
+$rust\
+$golang\
+$php\
+[](fg:ver_bg bg:tim_bg)\
+$time\
+[ ](fg:tim_bg)\
+\n$character"""
+
+[palettes.alvim]
+ini_bg = "#45A9A9" #a3aed2
+ini_txt = "#000000" #090c0c
+
+dir_bg = "#98E8DE" #769ff0
+dir_txt = "#333333" #e3e5e5
+
+git_bg = "#45A9A9" #394260
+git_txt_bra = "#222222" #769ff0
+git_txt_sta = "#000000" #769ff0
+
+ver_bg = "#212736" #212736
+ver_txt = "#45A9A9" #769ff0
+
+tim_bg = "#212736" #1d2230
+tim_txt = "#45A9A9" #a0a9cb
+
+[directory]
+style = "fg:dir_txt bg:dir_bg"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "/"
+# truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:git_bg"
+format = '[[ $symbol $branch ](fg:git_txt_bra bg:git_bg)]($style)'
+
+[git_status]
+style = "bg:git_bg"
+format = '[[($all_status$ahead_behind )](fg:git_txt_sta bg:git_bg)]($style)'
+
+[jj_bookmark]
+symbol = ""
+style = "bg:git_bg"
+format = '[[ $symbol $bookmark(@$remote)$diverged( \\(+$overflow_count others\\)) ](fg:dir_bg bg:git_bg)]($style)'
+
+[jj_status]
+style = "bg:git_bg"
+format = '[[($all )](fg:dir_bg bg:git_bg)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:ver_bg"
+format = '[[ $symbol ($version) ](fg:ver_txt bg:ver_bg)]($style)'
+
+[bun]
+symbol = ""
+style = "bg:ver_bg"
+format = '[[ $symbol ($version) ](fg:ver_txt bg:ver_bg)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:ver_bg"
+format = '[[ $symbol ($version) ](fg:ver_txt bg:ver_bg)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:ver_bg"
+format = '[[ $symbol ($version) ](fg:ver_txt bg:ver_bg)]($style)'
+
+[php]
+symbol = ""
+style = "bg:ver_bg"
+format = '[[ $symbol ($version) ](fg:ver_txt bg:ver_bg)]($style)'
+
+[time]
+disabled = true
+time_format = "%R" # Hour:Minute Format
+style = "bg:tim_bg"
+format = '[[  $time ](fg:tim_txt bg:tim_bg)]($style)'
+
+[os]
+style = "bg:ini_bg fg:ini_txt"
+format = "[ $symbol ]($style)"
+disabled = true
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+AOSC = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
