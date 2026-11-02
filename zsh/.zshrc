@@ -4,13 +4,11 @@
 # Sensitive work setup is defined in ~/.zshrc.work
 [ -f ~/.zshrc.work ] && source ~/.zshrc.work
 
+# Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
 
 # PHP
 PATH="/usr/local/opt/php@8.2/bin:$PATH"
-
-# Commands
-# add-ass is read from ~/.zshrc.work
 
 # Bun completions / Bun
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
@@ -37,7 +35,6 @@ better_cd() {
     else echo cannot cd to "$@"
     fi
 }
-
 alias cd='better_cd'
 
 export NVM_DIR="$HOME/.nvm"
@@ -45,18 +42,14 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh # Autojump export
 
+# Commands
+# Some commands are read from ~/.zshrc.work
+
 # ZSH Themes
 ZSH_THEME=""
-
 # Agnoster
 # ZSH_THEME="agnoster"
 # prompt_context() {}
-
-# Pure
-# ZSH_THEME=""
-# fpath+=("$(brew --prefix)/share/zsh/site-functions")
-# autoload -U promptinit; promptinit
-# prompt pure
 
 # Plugins
 plugins=(git)
@@ -65,8 +58,8 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 export LANG=en_US.UTF-8
 
-# Created by `pipx` on 2026-05-26 09:25:43
-export PATH="$PATH:$HOME/.local/bin"
-
 # Starship
 eval "$(starship init zsh)"
+
+# Created by `pipx` on 2026-05-26 09:25:43
+export PATH="$PATH:$HOME/.local/bin"
