@@ -33,9 +33,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # ZSH Themes
 ZSH_THEME=""
-# Agnoster
-# ZSH_THEME="agnoster"
-# prompt_context() {}
 
 # Plugins
 plugins=(git)
