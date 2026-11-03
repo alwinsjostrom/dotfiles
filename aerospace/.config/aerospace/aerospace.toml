@@ -10,39 +10,39 @@ after-startup-command = ['exec-and-forget borders active_color=0xff98E8DE inacti
 ctrl-1 = 'workspace 1'
 ctrl-2 = 'workspace 2'
 
-# Flytta fönster till workspace
+# Move window to workspace
 ctrl-shift-1 = 'move-node-to-workspace 1'
 ctrl-shift-2 = 'move-node-to-workspace 2'
 
-# Flytta fokus mellan fönster
+# Move focus between windows
 alt-h = 'focus left'
 alt-j = 'focus down'
 alt-k = 'focus up'
 alt-l = 'focus right'
 
-# Byt ordning på fönster
+# Rearrange windows
 alt-shift-h = 'move left'
 alt-shift-j = 'move down'
 alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 
-# Stäng fokuserat fonster
+# Close focused window
 alt-q = 'close'
 
-# Toggla layout
+# Toggle layout
 alt-r = 'layout tiles horizontal vertical'
 
-# Tillåt flytande fönster
+# Allow floating windows
 alt-f = 'layout floating tiling'
 
-# Maximera fokuserat fönster (toggle)
+# Maximize focused window (toggle)
 alt-shift-f = 'fullscreen'
 
-# Resizea fönster
+# Resize windows
 alt-comma = 'resize smart -250'
 alt-period = 'resize smart +250'
 
-# Andra kommandon
+# Other commands
 alt-enter = 'exec-and-forget /Users/alwinsjostrom/Applications/ghostty.app/Contents/MacOS/ghostty'
 
 # Workspaces
@@ -51,7 +51,7 @@ alt-enter = 'exec-and-forget /Users/alwinsjostrom/Applications/ghostty.app/Conte
 2 = 2 # P27h-20 (V)
 # 3 = 3 # Laptop
 
-# Flytta fönster automatiskt
+# Move windows automatically
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
 run = 'move-node-to-workspace 1'
@@ -64,7 +64,7 @@ run = 'move-node-to-workspace 2'
 # if.app-id = 'md.obsidian'
 # run = 'move-node-to-workspace 2'
 
-# Utseende
+# Appearance
 [gaps]
 inner.horizontal = 8
 inner.vertical = 8
