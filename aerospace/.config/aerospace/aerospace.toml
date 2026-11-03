@@ -2,6 +2,9 @@
 config-version = 2
 start-at-login = true
 
+# Borders
+after-startup-command = ['exec-and-forget borders active_color=0xff98E8DE inactive_color=0x50FFFFFF width=8.0']
+
 [mode.main.binding]
 # Workspaces
 ctrl-1 = 'workspace 1'
@@ -32,21 +35,21 @@ alt-r = 'layout tiles horizontal vertical'
 # Tillåt flytande fönster
 alt-f = 'layout floating tiling'
 
+# Maximera fokuserat fönster (toggle)
+alt-shift-f = 'fullscreen'
+
 # Resizea fönster
 alt-comma = 'resize smart -250'
 alt-period = 'resize smart +250'
+
+# Andra kommandon
+alt-enter = 'exec-and-forget /Users/alwinsjostrom/Applications/ghostty.app/Contents/MacOS/ghostty'
 
 # Workspaces
 [workspace-to-monitor-force-assignment]
 1 = 1 # P27h-20 (V)
 2 = 2 # P27h-20 (V)
 # 3 = 3 # Laptop
-
-# Borders
-after-startup-command = ['exec-and-forget borders active_color=0xff98E8DE inactive_color=0x50FFFFFF width=8.0']
-
-# Andra kommandon
-alt-enter = 'exec-and-forget /Users/alwinsjostrom/Applications/ghostty.app/Contents/MacOS/ghostty'
 
 # Flytta fönster automatiskt
 [[on-window-detected]]
