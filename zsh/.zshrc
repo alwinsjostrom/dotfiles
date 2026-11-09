@@ -24,9 +24,13 @@ case ":$PATH:" in
     *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+# fnm
+eval "$(fnm env --use-on-cd --version-file-strategy=recursive --corepack-enabled --log-level quiet)"
+
+# nvm
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # Commands
 # Some commands are read from ~/.zshrc.work
@@ -36,6 +40,7 @@ ZSH_THEME=""
 
 # Plugins
 plugins=(git)
+zstyle ':omz:update' mode disabled
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -46,6 +51,9 @@ eval "$(starship init zsh)"
 
 # Zoxide
 eval "$(zoxide init zsh --cmd cd)"
+
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Created by `pipx` on 2026-05-26 09:25:43
 export PATH="$PATH:$HOME/.local/bin"
