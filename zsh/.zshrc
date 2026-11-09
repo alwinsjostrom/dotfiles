@@ -52,6 +52,13 @@ eval "$(starship init zsh)"
 # Zoxide
 eval "$(zoxide init zsh --cmd cd)"
 
+# fzf
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND='fd --type d --hidden --exclude .git'
+source <(fzf --zsh)
+bindkey '^F' fzf-cd-widget
+
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
