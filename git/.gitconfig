@@ -1,0 +1,7 @@
+[user]
+        name = alwinsjostrom
+        email = 70133855+alwinsjostrom@users.noreply.github.com
+[init]
+        defaultBranch = main
+[includeIf "gitdir:~/Documents/Smoothcomp/"]
+        path = ~/.gitconfig.work
