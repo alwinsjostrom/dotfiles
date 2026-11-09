@@ -7,6 +7,14 @@
 # Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
 
+# Alias
+alias co='cd ~/.config'
+alias dt='cd ~/dotfiles'
+alias ls='eza --icons'
+alias ll='eza -l --icons --git'
+alias la='eza -la --icons --git'
+alias lt='eza --tree --level=2 --icons'
+
 # PHP
 PATH="/opt/homebrew/opt/php@8.2/bin:$PATH"
 
@@ -56,6 +64,7 @@ eval "$(zoxide init zsh --cmd cd)"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND='fd --type d --hidden --exclude .git'
+export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers --line-range=:200 {}'"
 source <(fzf --zsh)
 bindkey '^F' fzf-cd-widget
 
