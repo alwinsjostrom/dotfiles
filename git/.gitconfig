@@ -5,3 +5,5 @@
         defaultBranch = main
 [includeIf "gitdir:~/Documents/Smoothcomp/"]
         path = ~/.gitconfig.work
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
